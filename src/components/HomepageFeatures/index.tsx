@@ -11,6 +11,7 @@ type FeatureItem = {
 
 type FAQsItem = {
   title: string;
+  link: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -75,21 +76,27 @@ const FeatureList: FeatureItem[] = [
 const FAQsList: FAQsItem[] = [
   {
     title: "Account & Billing",
+    link: "faq/category/account--billing",
   },
   {
     title: "Candidates",
+    link: "faq/category/candidates",
   },
   {
     title: "Career Portal & Job Posting",
+    link: "faq/category/career-portal--job-posting",
   },
   {
     title: "Companies & Contacts",
+    link: "faq/category/companies--contacts",
   },
   {
     title: "General",
+    link: "faq/category/general",
   },
   {
     title: "Jobs",
+    link: "faq/category/jobs",
   },
 ];
 
@@ -110,11 +117,19 @@ function Feature({ title, description, link }: FeatureItem) {
   );
 }
 
-function FeatureFAQ({ title }: FAQsItem) {
+function FeatureFAQ({ title, link }: FAQsItem) {
   return (
-    <div className="grid-home-page-item">
-      <h3>{title}</h3>
-    </div>
+    <Link
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+      }}
+      to={link}
+    >
+      <div className="grid-home-page-item">
+        <h3>{title}</h3>
+      </div>
+    </Link>
   );
 }
 
@@ -157,7 +172,7 @@ export function HomepageFAQs(): JSX.Element {
           Frequently Asked Questions
         </h1>
         <div className="grid-home-page-container">
-          {FeatureList.map((props, idx) => (
+          {FAQsList.map((props, idx) => (
             <FeatureFAQ key={idx} {...props} />
           ))}
         </div>
