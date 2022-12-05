@@ -1,56 +1,102 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
+};
+
+type FAQsItem = {
+  title: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Getting Started",
+    description: (
+      <>Get your CATS account up and running with these easy guides</>
+    ),
+  },
+  {
+    title: "Account & Billing",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        User management, account settings, billing changes, administrative
+        settings
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Candidates",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Adding candidates, sourcing tools, searching, email and SMS
+        communication
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Career Portal & Job Posting",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Portal customization, publishing, third-party job boards, website
+        integration
       </>
     ),
+  },
+  {
+    title: "Jobs",
+    description: (
+      <>Creating jobs, registration, applications and triggers, publishing</>
+    ),
+  },
+  {
+    title: "Integrations",
+    description: (
+      <>Connect your CATS account to powerful outside apps and services</>
+    ),
+  },
+  {
+    title: "Companies & Contacts",
+    description: <></>,
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+const FAQsList: FAQsItem[] = [
+  {
+    title: "Account & Billing",
+  },
+  {
+    title: "Candidates",
+  },
+  {
+    title: "Career Portal & Job Posting",
+  },
+  {
+    title: "Companies & Contacts",
+  },
+  {
+    title: "General",
+  },
+  {
+    title: "Jobs",
+  },
+];
+
+function Feature({ title, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+    <div className="grid-home-page-item">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  );
+}
+
+function FeatureFAQ({ title }: FAQsItem) {
+  return (
+    <div className="grid-home-page-item">
+      <h3>{title}</h3>
     </div>
   );
 }
@@ -59,9 +105,43 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "2.5rem",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
+          General Guidance
+        </h1>
+        <div className="grid-home-page-container">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function HomepageFAQs(): JSX.Element {
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "2.5rem",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+          }}
+        >
+          Frequently Asked Questions
+        </h1>
+        <div className="grid-home-page-container">
+          {FeatureList.map((props, idx) => (
+            <FeatureFAQ key={idx} {...props} />
           ))}
         </div>
       </div>
