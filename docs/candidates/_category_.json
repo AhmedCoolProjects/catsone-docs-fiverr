@@ -1,0 +1,8 @@
+{
+  "label": "Candidates",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Adding candidates, sourcing tools, searching, email and SMS communication."
+  }
+}

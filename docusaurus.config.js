@@ -44,6 +44,18 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      {
+        id: "faq",
+        path: "faq",
+        routeBasePath: "faq",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -66,6 +78,13 @@ const config = {
             position: "left",
             label: "General Guidance",
           },
+          {
+            label: "FAQs",
+            position: "left",
+            docId: "faq",
+            to: "/faq/category/account--billing",
+          },
+
           {
             type: "search",
             position: "right",
