@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Catson Docs",
+  title: "CATS Docs",
   tagline: "For Professional Recruiters",
   url: "https://catsone.com/",
   baseUrl: "/",
@@ -74,84 +74,84 @@ const config = {
       },
       footer: {
         style: "light",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "General Guidance",
-                to: "/",
-              },
-              {
-                label: "FAQs",
-                to: "/",
-              },
-            ],
-          },
-          {
-            title: "Product",
-            items: [
-              {
-                label: "CATS Pro",
-                href: "https://catsone.com/products/",
-              },
-              {
-                label: "Pricing",
-                href: "http://catsone.com/pricing",
-              },
-              {
-                label: "Data Migration",
-                href: "https://catsone.com/data-migration/",
-              },
-            ],
-          },
-          {
-            title: "Company",
-            items: [
-              {
-                label: "Testimonials",
-                href: "http://catsone.com/testimonials-featured/",
-              },
-              {
-                label: "Careers",
-                href: "http://catsone.com/careers/",
-              },
-              {
-                label: "Team",
-                href: "http://catsone.com/team",
-              },
-              {
-                label: "Blog",
-                href: "https://blog.catsone.com/",
-              },
-            ],
-          },
-          {
-            title: "Resources",
-            items: [
-              {
-                label: "Knowledge Base",
-                href: "https://help.catsone.com/",
-              },
-              {
-                label: "Integrations",
-                href: "https://help.catsone.com/category/190-integrations",
-              },
-              {
-                label: "Press",
-                href: "http://catsone.com/press-kit/",
-              },
-              {
-                label: "Downloads",
-                href: "http://catsone.com/downloads/",
-              },
-              {
-                label: "API / Developers",
-                href: "https://docs.catsone.com/api/v3/",
-              },
-            ],
-          },
-        ],
+        // links: [
+        //   {
+        //     title: "Docs",
+        //     items: [
+        //       {
+        //         label: "General Guidance",
+        //         to: "/",
+        //       },
+        //       {
+        //         label: "FAQs",
+        //         to: "/",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "Product",
+        //     items: [
+        //       {
+        //         label: "CATS Pro",
+        //         href: "https://catsone.com/products/",
+        //       },
+        //       {
+        //         label: "Pricing",
+        //         href: "http://catsone.com/pricing",
+        //       },
+        //       {
+        //         label: "Data Migration",
+        //         href: "https://catsone.com/data-migration/",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "Company",
+        //     items: [
+        //       {
+        //         label: "Testimonials",
+        //         href: "http://catsone.com/testimonials-featured/",
+        //       },
+        //       {
+        //         label: "Careers",
+        //         href: "http://catsone.com/careers/",
+        //       },
+        //       {
+        //         label: "Team",
+        //         href: "http://catsone.com/team",
+        //       },
+        //       {
+        //         label: "Blog",
+        //         href: "https://blog.catsone.com/",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "Resources",
+        //     items: [
+        //       {
+        //         label: "Knowledge Base",
+        //         href: "https://help.catsone.com/",
+        //       },
+        //       {
+        //         label: "Integrations",
+        //         href: "https://help.catsone.com/category/190-integrations",
+        //       },
+        //       {
+        //         label: "Press",
+        //         href: "http://catsone.com/press-kit/",
+        //       },
+        //       {
+        //         label: "Downloads",
+        //         href: "http://catsone.com/downloads/",
+        //       },
+        //       {
+        //         label: "API / Developers",
+        //         href: "https://docs.catsone.com/api/v3/",
+        //       },
+        //     ],
+        //   },
+        // ],
         copyright: `Copyright © ${new Date().getFullYear()} CATS, Inc.`,
       },
       prism: {
