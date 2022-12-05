@@ -1,10 +1,12 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
+import Link from "@docusaurus/Link";
 
 type FeatureItem = {
   title: string;
   description: JSX.Element;
+  link: string;
 };
 
 type FAQsItem = {
@@ -14,12 +16,14 @@ type FAQsItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Getting Started",
+    link: "docs/category/getting-started",
     description: (
       <>Get your CATS account up and running with these easy guides</>
     ),
   },
   {
     title: "Account & Billing",
+    link: "docs/category/account--billing",
     description: (
       <>
         User management, account settings, billing changes, administrative
@@ -29,6 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Candidates",
+    link: "docs/category/candidates",
     description: (
       <>
         Adding candidates, sourcing tools, searching, email and SMS
@@ -38,6 +43,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Career Portal & Job Posting",
+    link: "docs/category/career-portal--job-posting",
     description: (
       <>
         Portal customization, publishing, third-party job boards, website
@@ -47,18 +53,21 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Jobs",
+    link: "docs/category/jobs",
     description: (
       <>Creating jobs, registration, applications and triggers, publishing</>
     ),
   },
   {
     title: "Integrations",
+    link: "docs/category/integrations",
     description: (
       <>Connect your CATS account to powerful outside apps and services</>
     ),
   },
   {
     title: "Companies & Contacts",
+    link: "docs/category/companies--contacts",
     description: <></>,
   },
 ];
@@ -84,12 +93,20 @@ const FAQsList: FAQsItem[] = [
   },
 ];
 
-function Feature({ title, description }: FeatureItem) {
+function Feature({ title, description, link }: FeatureItem) {
   return (
-    <div className="grid-home-page-item">
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
+    <Link
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+      }}
+      to={link}
+    >
+      <div className="grid-home-page-item">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </Link>
   );
 }
 
