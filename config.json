@@ -1,10 +1,10 @@
 {
     "index_name": "first_index",
     "start_urls": [
-        "https://catson-docs.vercel.app/"
+        "https://catsone-docs.vercel.app/"
     ],
     "sitemap_urls": [
-        "https://catson-docs.vercel.app/sitemap.xml"
+        "https://catsone-docs.vercel.app/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "stop_urls": [
